@@ -46,7 +46,7 @@
 
 * 打开后找到需要修改的部分，Charles是用java语言写的界面（java swing项目），一般UI处的改动都在gui目录下
 
-![image-20210519164243284](E:\learn-note\Charles\img\image-20210519164243284.png)
+![image-20210519164243284](./img/image-20210519164243284.png)
 
 
 
@@ -54,11 +54,11 @@
 
 1. 拿做好的一个功能来举例子，功能（解密接口请求参数），下面是完成图，新增了3个小功能解密不同的请求参数，原本Charles会自带一个Base64   Decode 功能，但是并不能满足解密需求
 
-![image-20210519165837719](E:\learn-note\Charles\img\image-20210519165837719.png)
+![image-20210519165837719](./img/image-20210519165837719.png)
 
 2. 先通过IDEA打开代码后先找到目标源码的位置，这个时候就可以通过IDEA关键字查找功能了，Windows快捷键是双击shift键，查找关键字（Base 64 Decode）
 
-   ![image-20210519171039521](E:\learn-note\Charles\img\image-20210519170846142.png)
+   ![image-20210519171039521](./img/image-20210519170846142.png)
 
 然后会看到这么3个类，Base64DecodeAction$Text、Base64DecodeAction$TextComponent、Base64DecodeAction，前面两个是子类（关于组件解密和文本解密），后面一个是关键的父类，点进去看看，如下，菜单名称随便改，主要解密逻辑代码根据自己需求进行改动，后面解密后的弹窗也可以进行重新写一个
 
@@ -356,11 +356,11 @@ public class Base64DecodeAction$TextComponent extends Base64DecodeAction {
 
 用IDEA自带的build进行编译，顶部菜单栏Build  ----  Build project
 
-![image-20210519175638857](E:\learn-note\Charles\img\image-20210519175638857.png)
+![image-20210519175638857](./img/image-20210519175638857.png)
 
 编译完成后会有class文件在项目out目录下生成，把编译后产物进行拷贝，放入一个目录下
 
-![image-20210519180029507](E:\learn-note\Charles\img\image-20210519180029507.png)
+![image-20210519180029507](./img/image-20210519180029507.png)
 
 
 
